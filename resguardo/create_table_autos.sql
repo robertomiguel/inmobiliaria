@@ -1,0 +1,23 @@
+CREATE TABLE `autos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `marca` varchar(60) DEFAULT NULL,
+  `modelo` varchar(60) DEFAULT NULL,
+  `detalle` varchar(100) DEFAULT NULL,
+  `a0km` decimal(12,2) DEFAULT NULL,
+  `a2015` decimal(12,2) DEFAULT NULL,
+  `a2014` decimal(12,2) DEFAULT NULL,
+  `a2013` decimal(12,2) DEFAULT NULL,
+  `a2012` decimal(12,2) DEFAULT NULL,
+  `a2011` decimal(12,2) DEFAULT NULL,
+  `a2010` decimal(12,2) DEFAULT NULL,
+  `a2009` decimal(12,2) DEFAULT NULL,
+  `a2008` decimal(12,2) DEFAULT NULL,
+  `a2007` decimal(12,2) DEFAULT NULL,
+  `a2006` decimal(12,2) DEFAULT NULL,
+  `a2005` decimal(12,2) DEFAULT NULL,
+  `a2004` decimal(12,2) DEFAULT NULL,
+  `a2003` decimal(12,2) DEFAULT NULL,
+  `a2002` decimal(12,2) DEFAULT NULL,
+  `moneda` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12468 DEFAULT CHARSET=utf8;

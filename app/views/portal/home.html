@@ -1,0 +1,94 @@
+<!DOCTYPE  html>
+<!--ng-app hace referencia al nombre de nuestro modulo-->
+<head>
+        <meta charset="UTF-8" />
+        <script type="text/javascript" src="js/alasql.min.js"></script>
+        <script type="text/javascript" src="js/xlsx.core.min.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/ngDialog.min.js"></script>
+        <script type="text/javascript" src="js/home.js"></script>
+        <link rel="stylesheet" href="/css/ngDialog.min.css">
+        <link rel="stylesheet" href="/css/ngDialog-theme-default.css">
+        <link rel="stylesheet" href="/css/global.css">
+
+</head>
+<body>
+    
+    <div ng-app="myApp" ng-controller="myCtrl" class="marco sombra" id="exportable">
+        <a href="" ng-click="cargar()">Cargar Clientes</a>
+        <a href="" ng-click="descargarexcel(total)">Descargar EXCEL</a>
+        <a href="" ng-click="ventana()">ventana</a>
+        <br>
+        Nombre : <input ng-model="buscar.nombre" />
+        DNI : <input ng-model="buscar.dni" />
+        Localidad : <input ng-model="buscar.localidad" />
+        Estado : <input ng-model="buscar.estado" /> 
+        Período : <input ng-model="buscar.fecha_alta" />
+        Nro. Sus : <input ng-model="buscar.nro" />
+        Plan : <input ng-model="buscar.plan" />
+
+        <table border="1" ng-init="importeTotal = 0">
+            <tr>
+                <td ng-click="orderByMe('localidad')">Suscriptor</td>
+                <td>Suscripciones</td>
+            </tr>
+            <tr ng-repeat="l in listado | orderBy:myOrderBy | filter:buscar | filter:query as total" ng-dblclick="editar($index)"
+               class="seleccion">
+                <td>
+                    <table class="datosCliente" style="width: 100%">
+                        <tr>
+                            <td colspan="2" align="center">
+                                <strong>{{l.nombre + ',' + l.apellido}}</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left">DNI: <strong>{{(l.dni | number).split(',').join('.')}}</strong></td>
+                            <td align="right">FNAC: <strong>{{l.nacimiento}}</strong></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="left">Dom: <strong>{{l.domicilio | capital:true}}</strong></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Loc: <strong>{{l.localidad | capital:true}}</strong></td>
+                            <td align="right">Prov: <strong>{{l.provincia | capital:true}}</strong></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="datosSuscripcion" style="width: 100%">
+                        <tr>
+                            <td align="left">Nro Sus: <strong>{{l.nro}}</strong></td>
+                            <td align="center">Alta: <strong>{{l.fecha_alta}}</strong></td>
+                            <td align="right">Estado: <strong>{{l.estado}}</strong></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" align="center"><strong>{{l.plan}}</strong></td>
+                        </tr>
+                        <tr>
+                            <td align="left"
+                            ng-init="importeTotal = importeTotal + (l.valor_cuota * 1)"
+                            >Cuota: <strong>{{l.valor_cuota | currency}}</strong></td>
+                            <td></td>
+                            <td align="right">Nominal: <strong>{{l.nominal | currency}}</strong></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Pagado: <strong>{{l.pagado | currency}}</strong></td>
+                            <td></td>
+                            <td align="right"><strong>{{l.x100}}</strong></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Total Cuota: {{listado|sumar:'valor_cuota'| currency}}</td>
+                <td>Total Cuota: {{sumarCampo(total,'valor_cuota') | currency}}</td>
+            </tr>
+                <td></td>
+                <td>Total de lineas: {{total.length}}</td>
+        </table>
+    </div>
+<p>
+    {{apellido}}
+</p>
+</body>
+</html>

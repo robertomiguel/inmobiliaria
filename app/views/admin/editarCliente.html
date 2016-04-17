@@ -1,0 +1,27 @@
+<div>
+    <table>
+        <caption>A:</caption>
+        <tr>
+            <td>Apellido</td><td><input type="text" ng-model="total[i]['apellido']"></td>
+        </tr>
+        <tr>
+            <td>Nombre</td><td><input type="text" ng-model="total[i]['nombre']"></td>
+        </tr>
+        <tr>
+            <td>DNI</td><td><input type="text" ng-model="total[i]['dni']"></td>
+        </tr>
+        <tr>
+            <td>Fecha Nac.</td><td><input type="date" datetime="'dd/MM/yyyy'" ng-model="total[i]['nacimiento']"
+                value="total[i]['nacimiento']">
+                <p>{{total[i]['nacimiento'] | date: 'yyyy-MM-dd HH:mm:ss Z'}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>Domicilio</td><td><input type="text" ng-model="total[i]['domicilio']"></td>
+        </tr>
+        <tr>
+            <td><button class="derecha" ng-click="grabar()">Grabar</button></td>
+            <td><button class="izquierda" ng-click="cerrar()">Cancelar</button></td>
+        </tr>
+    </table>
+</div>
