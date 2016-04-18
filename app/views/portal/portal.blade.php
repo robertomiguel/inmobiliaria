@@ -40,25 +40,42 @@
 	.ngdialog.ngdialog-theme-default.custom-width-900 .ngdialog-content {
 	    width: 900px;
 	}
+.menu{width: 100%; z-index: 5000;}
+.fixed{position:fixed; top:0}
 
 </style>
 
 <div class="container-fluid" ng-app="myApp" ng-controller="myCtrl">
-	<div class="row vertical-align">
+	<div class="row vertical-align header">
 		<div class="col-md-2 text-center">
 			<img src="/img/go_logo.jpg" alt="Gentión On-Line" class="img-responsive logo sombra redondear">
 		</div>
 		<div class="col-md-10 cabeza textosombra">
 			<h2>Inmobiliaria Rosario</h2>
 			<h4><span class="glyphicon glyphicon-home"></span> Lima 1422 - 2000 Rosario</h4>
-			<h4><span class="glyphicon glyphicon-phone"></span> Tel/Fax: 0341 - 155-833627</h4>
+			<h4><span class="glyphicon glyphicon-phone"></span> Tel: 0341 - 155-833627</h4>
 			<h4><span class="glyphicon glyphicon-envelope"></span> email: robertomiguel@outloook.com</h4>
 		</div>
 	</div>
 
 <br>
-
-<nav class="navbar navbar-default">
+<hr>
+<div class="row text-center">
+	<div class="col-md-3 col-xs-6 col-sm-4">
+		<a href="">La empresa</a>
+	</div>
+	<div class="col-md-3 col-xs-6 col-sm-4">
+		<a href="">Tasaciones</a>
+	</div>
+	<div class="col-md-3 col-xs-6 col-sm-4">
+		<a href="">Contacto</a>
+	</div>
+	<div class="col-md-3 col-xs-6 col-sm-4">
+		<a href="">Acceso</a>
+	</div>
+</div>
+<hr>
+<nav class="navbar navbar-default menu">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -114,7 +131,7 @@
 </nav>
 
 
-<div class="panel panel-default">
+<div class="panel panel-default wrapper">
   <div class="panel-heading">
     <h3 class="panel-title">Propiedades</h3>
   </div>
