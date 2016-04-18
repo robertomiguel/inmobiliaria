@@ -43,6 +43,9 @@ Route::resource('/', 'inicioControlador');
 Route::get('verDetalle', function(){
   return File::get(app_path().'/views/portal/verDetalle.html');
 });
+Route::get('consulta', function(){
+  return File::get(app_path().'/views/portal/consulta.html');
+});
 
 Route::post('marcalistado',   'inicioControlador@marcalistado');
 Route::post('rubrolistado',   'inicioControlador@rubrolistado');

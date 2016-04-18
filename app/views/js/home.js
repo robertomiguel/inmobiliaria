@@ -134,6 +134,18 @@ app.controller('myCtrl', function($scope, $http, ngDialog) {
         ngDialog.close();
     }
 
+    $scope.consulta = function(indice) {
+        $scope.i = indice;
+        ngDialog.open({ template: 'consulta',
+                        className: 'ngdialog-theme-default custom-width-600',
+                        controller: 'myCtrl',
+                            scope: $scope});
+    }
+
+    $scope.cerrarConsulta = function(){
+        ngDialog.close();
+    }
+
 /*
     $scope.cargar = function() {
         $http.post("/listadoctb")

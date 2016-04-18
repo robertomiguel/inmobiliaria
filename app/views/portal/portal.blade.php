@@ -29,6 +29,10 @@
 		height: 300px;
 	}
 
+	.ngdialog.ngdialog-theme-default.custom-width-600 .ngdialog-content {
+	    width: 600px;
+	}
+
 	.ngdialog.ngdialog-theme-default.custom-width-800 .ngdialog-content {
 	    width: 800px;
 	}
@@ -48,7 +52,7 @@
 			<h2>Inmobiliaria Rosario</h2>
 			<h4><span class="glyphicon glyphicon-home"></span> Lima 1422 - 2000 Rosario</h4>
 			<h4><span class="glyphicon glyphicon-phone"></span> Tel/Fax: 0341 - 155-833627</h4>
-			<h4><span class="glyphicon glyphicon-envelope"></span> email: gestiononline@gmail.com</h4>
+			<h4><span class="glyphicon glyphicon-envelope"></span> email: robertomiguel@outloook.com</h4>
 		</div>
 	</div>
 
@@ -126,7 +130,8 @@
 	        <h3>Mendoza 2100</h3>
 	        <p>Alquiler $ 4.800</p>
 	        <p>Vista sur, 3 dorm., 2 baños, balcón</p>
-	        <p><a href="" ng-click="detalle(1)" class="btn btn-primary" role="button">Detalle</a> <a href="" ng-click="consultar()" class="btn btn-default" role="button">Consultar</a></p>
+	        <p><a href="" ng-click="detalle(1)" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-eye-open"></span> Detalle</a>
+	        <a href="" ng-click="consulta(1)" class="btn btn-default derecha" role="button"><span class="glyphicon glyphicon-question-sign"></span> Consultar</a></p>
 	      </div>
 	    </div>
 	  </div>
@@ -138,7 +143,8 @@
 	        <h3>Bv Oroño 430</h3>
 	        <p>Alquiler $ 6.800</p>
 	        <p>2 dorm., 1 baños, balcón terraza, piscina</p>
-	        <p><a href="" ng-click="detalle(2)" class="btn btn-primary" role="button">Detalle</a> <a href="" ng-click="consultar()" class="btn btn-default" role="button">Consultar</a></p>
+	        <p><a href="" ng-click="detalle(2)" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-eye-open"></span> Detalle</a>
+	        <a href="" ng-click="consulta(2)" class="btn btn-default derecha" role="button"><span class="glyphicon glyphicon-question-sign"></span> Consultar</a></p>
 	      </div>
 	    </div>
 	  </div>
@@ -150,7 +156,8 @@
 	        <h3>Anchoris 300</h3>
 	        <p>Venta $ consultar.</p>
 	        <p>1 dorm., 1 baño, patio, garage</p>
-	        <p><a href="" ng-click="detalle(3)" class="btn btn-primary" role="button">Detalle</a> <a href="" ng-click="consultar()" class="btn btn-default" role="button">Consultar</a></p>
+	        <p><a href="" ng-click="detalle(3)" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-eye-open"></span> Detalle</a>
+	        <a href="" ng-click="consulta(3)" class="btn btn-default derecha" role="button"><span class="glyphicon glyphicon-question-sign"></span> Consultar</a></p>
 	      </div>
 	    </div>
 	  </div>
@@ -162,7 +169,8 @@
 	        <h3>9 de Julio 800</h3>
 	        <p>Alquiler $ 2.800</p>
 	        <p>Monoambiente, 1 baño, placard, luminoso</p>
-	        <p><a href="" ng-click="detalle(4)" class="btn btn-primary" role="button">Detalle</a> <a href="" ng-click="consultar()" class="btn btn-default" role="button">Consultar</a></p>
+	        <p><a href="" ng-click="detalle(4)" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-eye-open"></span> Detalle</a>
+	        <a href="" ng-click="consulta(4)" class="btn btn-default derecha" role="button"><span class="glyphicon glyphicon-question-sign"></span> Consultar</a></p>
 	      </div>
 	    </div>
 
