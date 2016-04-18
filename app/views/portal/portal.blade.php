@@ -9,13 +9,30 @@
 	}
 	.cabeza {
 		color: black;
+		width: 100%
 	}
 	@media (min-width: 600px) {
 		.cabeza {
 			background-image: url('/img/fondo_cabeza.jpg');
 			background-repeat: no-repeat;
-			width: 80%;
+			background-attachment: fixed;
+			background-position: 10px 10px;
+			background-size: 100% auto;
 			color: white;
+			padding-left: 30px;
+			right: 10px;
+		}
+	}
+	@media (max-width: 1100px) {
+		.cabeza {
+			background-image: url('/img/fondo_cabeza.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: 10px 10px;
+			background-size: auto 200px;
+			color: white;
+			right: 10px;
+			padding-left: 30px;
 		}
 	}
 	.vertical-align {
@@ -40,17 +57,22 @@
 	.ngdialog.ngdialog-theme-default.custom-width-900 .ngdialog-content {
 	    width: 900px;
 	}
-.menu{width: 100%; z-index: 5000;}
-.fixed{position:fixed; top:0}
+
+	.contenido {
+		width: 100%;
+	}
+.menu {z-index: 5000;}
+.fixed {
+	position:fixed; top:0; left: 10px; right: 10px;
+	-webkit-box-shadow: 0 0 8px 4px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, .5);
+}
 
 </style>
 
-<div class="container-fluid" ng-app="myApp" ng-controller="myCtrl">
-	<div class="row vertical-align header">
-		<div class="col-md-2 text-center">
-			<img src="/img/go_logo.jpg" alt="Gentión On-Line" class="img-responsive logo sombra redondear">
-		</div>
-		<div class="col-md-10 cabeza textosombra">
+<div class="container-fluid contenido" ng-app="myApp" ng-controller="myCtrl">
+	<div class="row header">
+		<div class="col-md-12 col-xs-12 cabeza textosombra">
 			<h2>Inmobiliaria Rosario</h2>
 			<h4><span class="glyphicon glyphicon-home"></span> Lima 1422 - 2000 Rosario</h4>
 			<h4><span class="glyphicon glyphicon-phone"></span> Tel: 0341 - 155-833627</h4>
@@ -58,7 +80,6 @@
 		</div>
 	</div>
 
-<br>
 <hr>
 <div class="row text-center">
 	<div class="col-md-3 col-xs-6 col-sm-4">
@@ -199,6 +220,11 @@
   </div>
 </div>
 
+<hr>
+
+<div class="text-center">  	
+	<p><strong>Demostración Software de gentión inmobiliario</strong></p>
+</div>
 
 </div>
 @stop
